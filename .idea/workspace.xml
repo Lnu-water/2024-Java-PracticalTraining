@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md" />
+    <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2024-Java-PracticalTraining.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/MathCalculations/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/MathCalculations/Summation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -37,7 +55,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "问题",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
@@ -45,6 +63,19 @@
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Learn.day01.Main" />
+      <module name="2024-Java-PracticalTraining" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Learn.day01.MathCalculations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="2024-Java-PracticalTraining" />
       <method v="2">
@@ -58,6 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,6 +106,7 @@
       <workItem from="1704193964600" duration="148000" />
       <workItem from="1704194285578" duration="384000" />
       <workItem from="1704194674779" duration="189000" />
+      <workItem from="1704194909127" duration="7686000" />
     </task>
     <task id="LOCAL-00001" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
       <option name="closed" value="true" />
