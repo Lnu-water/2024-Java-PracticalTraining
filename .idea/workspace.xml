@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2024-Java-PracticalTraining.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/MathCalculations/Division.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/MathCalculations/Summation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +96,7 @@
       <workItem from="1704193964600" duration="148000" />
       <workItem from="1704194285578" duration="384000" />
       <workItem from="1704194674779" duration="189000" />
-      <workItem from="1704194909127" duration="7686000" />
+      <workItem from="1704194909127" duration="8838000" />
     </task>
     <task id="LOCAL-00001" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
       <option name="closed" value="true" />
@@ -116,7 +106,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704194699320</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <option name="closed" value="true" />
+      <created>1704207003666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704207003667</updated>
+    </task>
+    <task id="LOCAL-00003" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <option name="closed" value="true" />
+      <created>1704207767363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704207767363</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
