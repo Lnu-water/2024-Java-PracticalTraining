@@ -29,7 +29,7 @@
         <span v-else-if="students.age < 60">中年</span>
         <span v-else>老年</span>
     </p>
-    <table>
+    <table class="goods_table td">
         <tr>
             <th>商品名称</th>
             <th>商品价格</th>
@@ -42,16 +42,16 @@
             <td>{{ good.brand }}</td>
             <td>{{ good.code }}</td>
             <td>
-                <!-- 1.
+                <!--
                     vue 绑定 js 事件 2 中方法
                     
                     1. v-on: 各种事件="调用方法"
                     2. @各种事件
                 -->
-                <button>
+                <button v-on:onclick="delete_goods">
                     删除
                 </button>
-                <button>
+                <button type="button" @click="">
                     修改
                 </button>
             </td>
@@ -62,16 +62,37 @@
 <script>
     //  创建 sVue 实例
     var app = new Vue({
-        element: '#app', // vue 框架作用的页面标签范围
+        el: '#app', // vue 框架作用的页面标签范围
         data: { // 存放 vue 的数据
-            student: {name: "张三", age: 18, sex: "1", hobby: ["篮球", "足球", "游泳"]}
+            students: {name: "张三", age: 18, sex: "1", hobby: ["篮球", "足球", "游泳"]},
             goods_list: [
                 {name: "巧克力", price: 3.5, brand: "士力架", code: 1224657701},
                 {name: "糖果", price: 5, brand: "大白兔", code: 1224657702},
                 {name: "蛋糕", price: 1, brand: "好丽友", code: 1224657703}
             ]
+        },
+
+        // vue 编写方法的位置
+        methods: {
+            /* 删除方法 */
+            delete_goods: function (good_id) {
+                if (confirm("确定删除吗？")) {
+                    // TODO(待办任务) 发送网络请求，将需要删除的商品传递给后端，后端进行数据删除
+                    alert("删除了" + good_id)
+                }
+            },
+            /* 修改商品 */
+            update_goods: function (good_id) {
+                location.href = "update_goods.html?good_id=" + good_id;
+            },
         }
     });
+
+    new XMLHttpRequest()
+
+    function fun() {
+
+    }
 </script>
 </body>
 </html>
