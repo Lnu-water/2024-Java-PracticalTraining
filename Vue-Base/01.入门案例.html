@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01.入门案例</title>
+    <!-- 引入 Vue 框架 -->
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<!--    Vue 框架作用标签 -->
+<div id="app">
+    {{ messages }}<br/>
+    {{ count + 1 }}<br/>
+    {{ temp ? '真' : '假' }}
+    <p>
+        我叫{{ students.name }}，今年{{ students.age }}岁，性别{{ students.sex }}
+    </p>
+</div>
+<div id="box"></div>
+</body>
+<script>
+    //  创建 sVue 实例
+    var vue = new Vue({
+        element: '#app', // vue 框架作用的页面标签范围
+        data: { // 存放 vue 的数据
+            message: "Hello Vue!",
+            count: 99,
+            temp: true,
+            student: {name: "张三", age: 18, sex: "男", hobby: ["篮球", "足球", "游泳"]}
+        }
+    });
+
+    // 使用原生 js 进行 dom 操作渲染数据
+    document.getElementById("box").innerText = "Hello World!";
+</script>
+</html>
