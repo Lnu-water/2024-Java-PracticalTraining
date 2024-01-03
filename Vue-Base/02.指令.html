@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>02.指令</title>
+    <link href="css/index.css" rel="stylesheet">
     <!-- 引入 Vue 框架 -->
-    <script src="js/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <script src="js/vue.min.js"></script>
 </head>
 <body>
 <!-- Vue 中的指令 v-xxx xxx即为指令
@@ -13,34 +13,65 @@
      v-if
      v-elseif
      v-else
+     
+     2. 循环指令
+     <标签 v-for="每次循环数组取出的变量"
  -->
 
 
 <!--    Vue 框架作用标签 -->
 <div id="app">
     <!--    小于 12 岁，少年；小于 30 岁，青年；小于 60 岁，中年；其他 老年 -->
-    <p>我叫{{students.name}}，今年{{students.age}}岁，我是{{students.sex == 1 ? '男' : '女'}}生</p>
-    年龄段：
-    <span v-if="students.age < 12">少年</span>
-    <span v-else-if="students.age < 30">青年</span>
-    <span v-else-if="students.age < 60">中年</span>
-    <span v-else>老年</span>
+    <p>我叫{{ students.name }}，今年{{ students.age }}岁，我是{{ students.sex === 1 ? '男' : '女' }}生
+        年龄段：
+        <span v-if="students.age < 12">少年</span>
+        <span v-else-if="students.age < 30">青年</span>
+        <span v-else-if="students.age < 60">中年</span>
+        <span v-else>老年</span>
+    </p>
+    <table>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品品牌</th>
+            <th>商品编码</th>
+        </tr>
+        <tr v-for="good in goods_list">
+            <td>{{ good.name }}</td>
+            <td>{{ good.price }}</td>
+            <td>{{ good.brand }}</td>
+            <td>{{ good.code }}</td>
+            <td>
+                <!-- 1.
+                    vue 绑定 js 事件 2 中方法
+                    
+                    1. v-on: 各种事件="调用方法"
+                    2. @各种事件
+                -->
+                <button>
+                    删除
+                </button>
+                <button>
+                    修改
+                </button>
+            </td>
+        </tr>
+    </table>
 </div>
-<div id="box"></div>
-</body>
+
 <script>
     //  创建 sVue 实例
-    var vue = new Vue({
+    var app = new Vue({
         element: '#app', // vue 框架作用的页面标签范围
         data: { // 存放 vue 的数据
-            message: "Hello Vue!",
-            count: 99,
-            temp: true,
             student: {name: "张三", age: 18, sex: "1", hobby: ["篮球", "足球", "游泳"]}
+            goods_list: [
+                {name: "巧克力", price: 3.5, brand: "士力架", code: 1224657701},
+                {name: "糖果", price: 5, brand: "大白兔", code: 1224657702},
+                {name: "蛋糕", price: 1, brand: "好丽友", code: 1224657703}
+            ]
         }
     });
-
-    // 使用原生 js 进行 dom 操作渲染数据
-    document.getElementById("box").innerText = "Hello World!";
 </script>
+</body>
 </html>
