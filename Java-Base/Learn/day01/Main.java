@@ -1,14 +1,19 @@
 package Learn.day01;
 
+import Learn.day01.GuessNumbers.GuessNumbers;
 import Learn.day01.MathCalculations.Division;
 import Learn.day01.MathCalculations.Summation;
 import Learn.day01.NumericSorting.Maximum;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             numbers.add(i + 1);
@@ -26,7 +31,24 @@ public class Main {
         m_table.nine_nine_table();
 
         System.out.println("\n----------------Part 2----------------");
-        System.out.println(max.maximun(numbers));
+
+        // 2. 设计一个函数（方法），要求可以计算三个整数的最大值，比如输入1,2,3，则返回3
+        System.out.println("\n----------------------------------------------------------------"
+                + "\n请输入若干个整数，并且使用,(英文半角)进行分割，例如：1,2,3");
+        ArrayList<Integer> max_list = ((ArrayList<Integer>) new ArrayList<>(Arrays.asList(sc.nextLine().split(","))).stream().map(Integer::valueOf).collect(Collectors.toList()));
+        System.out.println(max_list.get(0) + "," + max_list.get(1) + "," + max_list.get(2) + "中最大值为" + max.maximun(max_list));
+
+        // 3. 设计一个函数（方法），要求可以计算两个整数的范围之和
+        System.out.println("\n----------------------------------------------------------------"
+                + "\n设计一个函数（方法），要求可以计算两个整数的范围之和");
+
+        System.out.println("\n----------------Part 3----------------");
+        // 登录功能
+
+        System.out.println("\n----------------Part 4----------------");
+        // 随机数游戏
+        GuessNumbers.guess();
+
     }
 }
 

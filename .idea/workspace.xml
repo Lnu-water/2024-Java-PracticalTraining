@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch main&#10;Your branch is up to date with 'origin/main'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/GuessNumbers/GuessNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +17,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,6 +95,19 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.Main">
+    <configuration name="GuessNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Learn.day01.GuessNumbers.GuessNumbers" />
+      <module name="2024-Java-PracticalTraining" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Learn.day01.GuessNumbers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="JAVA_HOME" value="D:\SoftWare\Java\jdk-1.8" />
@@ -119,11 +134,13 @@
     <list>
       <item itemvalue="JavaScript 调试.01.入门案例.html" />
       <item itemvalue="Node.js.index.js (3)" />
+      <item itemvalue="应用程序.GuessNumbers" />
       <item itemvalue="应用程序.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.GuessNumbers" />
         <item itemvalue="JavaScript 调试.01.入门案例.html" />
         <item itemvalue="Node.js.index.js (3)" />
       </list>
@@ -145,6 +162,8 @@
       <workItem from="1704241181837" duration="10238000" />
       <workItem from="1704252344297" duration="3330000" />
       <workItem from="1704264305483" duration="5099000" />
+      <workItem from="1704284250170" duration="2693000" />
+      <workItem from="1704327018829" duration="7965000" />
     </task>
     <task id="LOCAL-00001" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
       <option name="closed" value="true" />
@@ -266,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704266959325</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="On branch main&#10;Your branch is up to date with 'origin/main'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <option name="closed" value="true" />
+      <created>1704284320501</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1704284320501</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
