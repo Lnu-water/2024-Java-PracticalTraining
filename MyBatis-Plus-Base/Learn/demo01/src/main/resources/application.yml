@@ -1,0 +1,15 @@
+# 配置连接数据库的信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.17.139:3306/数据库名
+    username:
+    password:
+    type: com.alibba.druid.pool.DruidDataSource
+    druid:
+      max-active: 10
+
+# MyBatis-Plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
