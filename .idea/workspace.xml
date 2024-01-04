@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d407dbdf-7349-4d95-86a8-60c7f07ad43e" name="更改" comment="On branch main&#10;Your branch is up to date with 'origin/main'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
-      <change afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/GuessNumbers/GuessNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/src/main/java/com/water/demo01/Demo01Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/src/main/java/com/water/demo01/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBatis-Plus-Base/Learn/demo01/src/test/java/com/water/demo01/Demo01ApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Base/Learn/day01/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +171,8 @@
       <workItem from="1704252344297" duration="3330000" />
       <workItem from="1704264305483" duration="5099000" />
       <workItem from="1704284250170" duration="2693000" />
-      <workItem from="1704327018829" duration="7965000" />
+      <workItem from="1704327018829" duration="8130000" />
+      <workItem from="1704351037101" duration="2225000" />
     </task>
     <task id="LOCAL-00001" summary="On branch HTML-Base&#10;Your branch is up to date with 'origin/HTML-Base'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
       <option name="closed" value="true" />
@@ -293,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704284320501</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="On branch main&#10;Your branch is up to date with 'origin/main'.&#10;&#10;Changes to be committed:&#10;&#9;modified:   README.md">
+      <option name="closed" value="true" />
+      <created>1704335212127</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1704335212127</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
