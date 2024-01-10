@@ -1,0 +1,29 @@
+.quxue-shouyin {
+    height: 100vh;
+    min-height: 800px;
+}
+
+.shouyin-header {
+    height: 100px;
+    background: #012155;
+    color: #fff;
+    line-height: 100px;
+    padding: 0 var(--padding);
+}
+
+.shouyin-header h1 {
+    padding-left: 220px;
+    background: url(../imgs/logo.svg) no-repeat left center;
+    background-size: 200px;
+    font-size: 14px;
+}
+
+.shouyin-main {
+    height: calc(100% - 100px);
+    box-sizing: border-box;
+    padding: var(--padding);
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+    background-image: linear-gradient(180deg, #014cc6 0%, #02f971 80%, #0d015a 100%);
+}

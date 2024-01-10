@@ -1,0 +1,104 @@
+/* 左侧收银区域 */
+.scan-area {
+    flex: 1;
+}
+
+.scan-area .scan-form {
+    height: 60px;
+    display: flex;
+    margin-bottom: var(--gap);
+}
+
+.scan-area .scan-form .input-box {
+    flex: 4;
+    background: #fff;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid rgba(40, 40, 40, 0.4);
+    padding-left: 10px;
+
+}
+
+.scan-area .scan-form .btn-box {
+    flex: 1;
+    background: var(--greenColor);
+    border-radius: 0 10px 10px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.scan-area .scan-list {
+    height: calc(100% - 72px);
+    padding: var(--gap) 0;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scan-area .scan-list .scan-list-content {
+    padding: 0 var(--gap);
+    flex: 1;
+    overflow: auto;
+}
+
+.scan-area .scan-list table {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.scan-area .scan-list table thead {
+    background: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.scan-area .scan-list table th,
+.scan-area .scan-list table td {
+    border-bottom: 1px solid #888;
+    padding: var(--gap) 0;
+}
+
+.scan-area .scan-list table td input[type="button"]:hover {
+    background: var(--greenColor);
+}
+
+.scan-area .scan-list table th {
+    color: #888;
+}
+
+.scan-area .scan-list table th:first-child,
+.scan-area .scan-list table td:first-child {
+    text-align: left;
+}
+
+.scan-area .scan-list table .code {
+    color: #888;
+}
+
+.scan-area .scan-list .scan-list-action {
+    padding: 0 var(--gap);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #fff;
+    border-top: 1px solid #888;
+}
+
+.scan-area .scan-list .scan-list-action .goods-total-price {
+    color: var(--redColor);
+    font-size: 20px;
+}
+
+.scan-area .scan-list-action .btn-box input[type="button"] {
+    width: 80px;
+    height: 40px;
+    background: var(--greenColor);
+    color: #fff;
+}
+
+.scan-area .scan-list-action .btn-box input[type="button"]:last-child {
+    background: var(--blueColor);
+}
+ 

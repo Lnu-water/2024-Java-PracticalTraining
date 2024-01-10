@@ -3,8 +3,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.17.139:3306/数据库名
-    username:
-    password:
+    username: huangzc
+    password: Hzc.1230.0
     type: com.alibba.druid.pool.DruidDataSource
     druid:
       max-active: 10

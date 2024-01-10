@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>趣学收银系统</title>
+    <!-- 公共样式 -->
+    <link href="css/base.css" rel="stylesheet">
+    <!-- 页面整体 + 头部样式 -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- 左侧扫码部分  -->
+    <link href="css/scan.css" rel="stylesheet">
+    <!-- 右侧支付部分  -->
+    <link href="css/paid.css" rel="stylesheet">
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+
+</head>
+<body>
+<div class="quxue-shouyin" id="app">
+    <div class="shouyin-header">
+        <h1>面向工资编程</h1>
+    </div>
+    <div class="shouyin-main">
+        <!-- 左侧扫码部分 -->
+        <div class="scan-area">
+            <div class="scan-form">
+                <input autofocus class="input-box" placeholder="请输入扫描商品条形码" type="text" v-model="goodsCode">
+                <input @click="scanGoods" class="btn-box" type="button" value="确认">
+            </div>
+            <div class="scan-list">
+                <div class="scan-list-content">
+                    <table cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>品名</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>小计</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="goods in goodsList">
+                            <td>
+                                <div>{{goods.name}}</div>
+                                <div class="code">5968492842578475</div>
+                            </td>
+                            <td>
+                                <input @click="beforeUpdate" type="button" value="-">
+                                <span>
+                                    <input @click="beforeUpdate" size="5" type="number" v-model="goods.buyNum">
+                                </span>
+                                <input @click="beforeUpdate" type="button" value="+">
+                            </td>
+                            <td class="price">{{goods.price}}</td>
+                            <td class="price">{{goods.price * goods.buyNum}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="scan-list-action">
+                    <div class="btn-box">
+                        <input type="button" value="添加商品">
+                        <input type="button" value="清空商品">
+                    </div>
+                    <div class="txt-box">
+                        <span style="margin-right: 10px;">商品总数：
+                            <span class="goods-type-num" v-text="totalCount"></span>
+                        </span>
+                        <span>总价：
+                            <span class="goods-total-price price" v-text="totalPrice"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧收银部分 -->
+        <div class="paid-area">
+            <ul class="paid-area-show">
+                <li>
+                    <span>应收</span>
+                    <span class="price" v-text="totalPrice"></span>
+                </li>
+                <li>
+                    <span>实收</span>
+                    <span class="price">100.00</span>
+                </li>
+                <li>
+                    <span>找零</span>
+                    <span class="price" v-text="100 - totalPrice"></span>
+                </li>
+            </ul>
+            <div class="paid-area-action">
+                <span>现金支付</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>¥100</span>
+                <span>支付宝</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>¥50</span>
+                <span>微信支付</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>¥20</span>
+                <span>银行卡</span>
+                <span>0</span>
+                <span>00</span>
+                <span>.</span>
+                <span>¥10</span>
+                <span>信用卡</span>
+                <span>删除</span>
+                <span @click="clearTable">清空</span>
+                <span @click="addOrder" style="cursor: pointer">结算</span>
+            </div>
+            <div class="best-wish">
+                跟着趣学上高速，学习编程不迷路！
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            goodsList: [
+                /* { name: '农夫山泉饮用天然水!!', price: 3},
+                { name: '爱国者蓝牙耳机!!', price: 99 } */
+            ],
+            goodsCode: '',
+            newGoods: null,
+            totalPrice: 0.0,
+            totalCount: 0
+        },
+        methods: {
+            scanGoods: function (event) {
+                console.log("keyCode==13:" + this.goodsCode);
+                if (this.goodsCode === "") {
+                    alert("商品编码不能为空")
+                    return
+                }
+                let url = "/api/v1/goods/getByCode?code=" + this.goodsCode;
+                axios.get(url)
+                    .then((response) => {
+                        //箭头函数，这时用this可以获取到VUE对象
+                        if (response.data.resultCode === 200) {
+                            let bool = 0;
+                            this.newGoods = response.data.data;
+                            //javascript设置语法，可以直接为对象设置属性
+                            this.newGoods.buyNum = 1;
+                            for (let i = 0; i < this.goodsList.length; i++) {
+                                if (this.newGoods.name === this.goodsList[i].name) {
+                                    bool = 1;
+                                    break;
+                                }
+                            }
+                            if (bool === 1) {
+                                this.goodsList.find(item => item.name === this.newGoods.name).buyNum++;
+                            } else {
+                                this.goodsList.unshift(this.newGoods);
+                            }
+                            this.goodsCode = "";
+                            this.beforeUpdate();
+                        } else if (response.data.resultCode === 404) {
+                            alert("扫码有误，未识别到商品信息");
+                        }
+                    })
+                    .catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+            },
+            addOrder: function () {
+                //1，获取所有的商品
+                console.log(this.goodsList);
+                //2，使用axios 发送请求提交订单明细数据到后台
+                axios.post("/api/v1/order/addOrder", this.goodsList).then(function (response) {
+                    console.log(response)
+                    if (response.data.resultCode === 200) {
+                        alert("结算成功!!");
+                        app.goodsList = [];
+                    }
+                })
+            },
+            beforeUpdate: function () {
+                //更新总价
+                var sum = 0;
+                var count = 0;
+                var goodsList = this.goodsList;
+                for (var i = 0; i < goodsList.length; i++) {
+                    sum = sum + goodsList[i].price * goodsList[i].buyNum;
+                    count = count + goodsList[i].buyNum;
+                }
+                this.totalPrice = sum;
+
+                //更新总数量
+                this.totalCount = count;
+            },
+            clearTable() {
+                this.goodsList = [];
+                this.totalPrice = 0;
+                this.totalCount = 0;
+            },
+        }
+    });
+</script>
+</body>
+</html>

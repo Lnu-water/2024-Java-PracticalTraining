@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --padding: 24px;
+    --gap: 18px;
+    --blueColor: rgb(73, 174, 213);
+    --greenColor: rgb(161, 211, 111);
+    --redColor: rgb(250, 64, 18);
+}
+
+body, h1, th, td, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: 0 none;
+}
+
+/* 公共类 */
+.price::before {
+    content: '¥';
+    font-size: 14px;
+    margin-right: 4px;
+}

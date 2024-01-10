@@ -1,0 +1,81 @@
+/* 右侧支付区域 */
+.paid-area {
+    width: 500px;
+    background: rgba(40, 40, 40, 0.1);
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+    border-radius: 10px;
+}
+
+.paid-area .paid-area-show {
+    height: 100px;
+    background: #fff;
+    border-radius: 10px;
+    padding: var(--gap) 0;
+    text-align: center;
+    display: flex;
+}
+
+.paid-area .paid-area-show li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paid-area .paid-area-show li + li {
+    border-left: 1px solid #888;
+}
+
+.paid-area .paid-area-show .price {
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.paid-area .paid-area-action {
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr) 80px;
+    gap: 12px;
+}
+
+.paid-area .paid-area-action span {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.paid-area .paid-area-action span:nth-child(5n+1) {
+    background: var(--blueColor);
+    color: #fff;
+}
+
+.paid-area .paid-area-action span:nth-child(5n) {
+    background: var(--redColor);
+    color: #fff;
+}
+
+.paid-area .paid-area-action span:last-child {
+    background: var(--greenColor);
+    grid-column: span 2;
+    color: #fff;
+}
+
+.paid-area .best-wish {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    color: #888;
+}
+
+@media screen and (max-width: 992px) {
+    .paid-area {
+        display: none;
+    }
+}
